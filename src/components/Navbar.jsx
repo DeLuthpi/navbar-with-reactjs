@@ -16,15 +16,17 @@ const Navbar = (props) => {
 					</span>
 					<div className="navbar-btn">
 						<div className="navbar-device">
-							<div className="grid-icon">
-								<div className="icon-cart">
-									<span className="icon-count"> 0 </span>
-									<a href="/cart"><i className="fa-solid fa-basket-shopping"></i></a>
+							{!props?.isShowLogin ? <a href="/login" className="btn-login">Login</a> :
+								<div className="grid-icon">
+									<div className="icon-cart">
+										<span className="icon-count"> 0 </span>
+										<a href="/cart"><i className="fa-solid fa-basket-shopping"></i></a>
+									</div>
+									<div className="icon-user">
+										<a href="/profile"><i className="fa-regular fa-user"></i></a>
+									</div>
 								</div>
-								<div className="icon-user">
-									<a href="/profile"><i className="fa-regular fa-user"></i></a>
-								</div>
-							</div>
+							}
 						</div>
 						<span className="icon-hamburger">
 							<button id="btn-hamburger" className="btn-hamburger" onClick={props?.handleClick}><i className="fa-solid fa-bars btn-icon" id="btn-icon"></i></button>

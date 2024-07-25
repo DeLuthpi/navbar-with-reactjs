@@ -154,11 +154,23 @@ menu {
 }
 
 .btn-login:hover {
+	--translate-y: 0%;
+	--translate-x: 0%;
+	--rotate: 0deg;
+	--skew-x: 0deg;
+	--skew-y: 0deg;
 	--scale-x: 1.05;
 	--scale-y: 1.05;
 	transform: translate(var(--translate-x), var(--translate-y)) rotate(var(--rotate)) skewX(var(--skew-x)) skewY(var(--skew-y)) scaleX(var(--scale-x)) scaleY(var(--scale-y));
 	background-color: rgb(188 108 37 / var(--bg-opacity));
 	color: white;
+}
+
+@media (max-width: 767px) {
+	.btn-login {
+		margin-right: 10px;
+		padding: 2px 15px 5px;
+	}
 }
 
 .navbar-device {
